@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity() {
     private fun showToast(Msg_string: String) {
         val toast: Toast =
             Toast.makeText(this@MainActivity, Msg_string, Toast.LENGTH_SHORT)
+
         toast.show()
     }
 //Nullability
