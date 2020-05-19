@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var password: EditText
     private lateinit var loginButton: Button
     private lateinit var emailId: String
+
     private lateinit var passwordString: String
 
     //Variable in kotlin
