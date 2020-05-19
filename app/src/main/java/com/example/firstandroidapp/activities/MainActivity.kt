@@ -14,6 +14,7 @@ import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
     private lateinit var email: EditText
+
     private lateinit var password: EditText
     private lateinit var loginButton: Button
     private lateinit var emailId: String
