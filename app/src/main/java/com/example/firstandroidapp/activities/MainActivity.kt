@@ -1,6 +1,7 @@
 package com.example.firstandroidapp.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -14,13 +15,10 @@ import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
     private lateinit var email: EditText
-
     private lateinit var password: EditText
     private lateinit var loginButton: Button
     private lateinit var emailId: String
-
     private lateinit var passwordString: String
-
     //Variable in kotlin
     private var Counter: Int = 0
 
@@ -54,24 +52,27 @@ class MainActivity : AppCompatActivity() {
         Log.d("This is my inner class example", "$demo");
 
         loginButton.setOnClickListener {
-            emailId = email.text.toString()
-            passwordString = password.text.toString()
+//            emailId = email.text.toString()
+//            passwordString = password.text.toString()
+//
+//            Log.i("Main activity", emailId)
+//            Log.i("Main activity", passwordString)
+//
+//            val validated = loginValidations(emailId, passwordString)
+//            if (validated) {
+//                showToast("Success")
+//            }
+//
+//            forLoopInKotlin()
+//            exceptionHandlingCode()
+//            listExample()
+//
+//
+//            val demo = Outer().Inner()
+//            Log.d("This is my inner class example", "${demo.foo()}");
+            val intent = Intent(this, HomeScreenActivity::class.java)
+            startActivity(intent)
 
-            Log.i("Main activity", emailId)
-            Log.i("Main activity", passwordString)
-
-            val validated = loginValidations(emailId, passwordString)
-            if (validated) {
-                showToast("Success")
-            }
-
-            forLoopInKotlin()
-            exceptionHandlingCode()
-            listExample()
-
-
-            val demo = Outer().Inner()
-            Log.d("This is my inner class example", "${demo.foo()}");
 
 
         }
