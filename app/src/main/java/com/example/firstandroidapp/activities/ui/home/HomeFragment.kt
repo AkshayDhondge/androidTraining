@@ -20,21 +20,21 @@ class HomeFragment : Fragment() {
     private lateinit var checkBox1: CheckBox
     private var isProgress: Boolean? = true
 
-    private lateinit var view1: View
+    private lateinit var homeFragmentView: View
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        view1 = inflater.inflate(R.layout.fragment_home, container, false)
+        homeFragmentView = inflater.inflate(R.layout.fragment_home, container, false)
 
-        homeButton = view1.findViewById(R.id.btnHome)
-        progressBar = view1.findViewById(R.id.progressBar)
-        malaRadio = view1.findViewById(R.id.radioMale)
-        femaleRadio = view1.findViewById(R.id.radioFemale)
-        showDialog = view1.findViewById(R.id.btnShowDialog)
-        checkBox1 = view1.findViewById(R.id.checkBox)
+        homeButton = homeFragmentView.findViewById(R.id.btnHome)
+        progressBar = homeFragmentView.findViewById(R.id.progressBar)
+        malaRadio = homeFragmentView.findViewById(R.id.radioMale)
+        femaleRadio = homeFragmentView.findViewById(R.id.radioFemale)
+        showDialog = homeFragmentView.findViewById(R.id.btnShowDialog)
+        checkBox1 = homeFragmentView.findViewById(R.id.checkBox)
 
         homeButton.setOnClickListener {
             val toast: Toast =
@@ -91,7 +91,7 @@ class HomeFragment : Fragment() {
             alertDialog.show()
         }
 
-        return view1
+        return homeFragmentView
 
     }
 

@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.d("This is activity life cycle example", "onCreate");
 
         //Object of sample class (Java class)
         sampelObject = sampleClass()
@@ -80,6 +81,53 @@ class MainActivity : AppCompatActivity() {
         //Higher order function calling
         func("BeginnersBook", ::demo)
 
+    }
+
+    /*  Activity life cycle methods to understand the life cycle of activity   */
+    @SuppressLint("LongLogTag")
+    override fun onStart() {
+        super.onStart()
+        //print("onStart")
+        Log.d("This is activity life cycle example", "onStart");
+    }
+
+    @SuppressLint("LongLogTag")
+    override fun onResume() {
+        super.onResume()
+        //print("onResume")
+        Log.d("This is activity life cycle example", "onResume");
+    }
+
+    @SuppressLint("LongLogTag")
+    override fun onPause() {
+        super.onPause()
+        print("onPause")
+        Log.d("This is activity life cycle example", "onPause");
+    }
+
+    @SuppressLint("LongLogTag")
+    override fun onStop() {
+        super.onStop()
+        //print("onStop")
+        Log.d("This is activity life cycle example", "onStop");
+    }
+
+    @SuppressLint("LongLogTag")
+    override fun onRestart() {
+        super.onRestart()
+        //print("onRestart")
+        Log.d("This is activity life cycle example", "onRestart");
+    }
+
+    @SuppressLint("LongLogTag")
+    override fun onDestroy() {
+        super.onDestroy()
+        //print("onDestroy")
+        Log.d("This is activity life cycle example", "onDestroy");
+    }
+
+    private fun print(msg: String){
+        Log.d("Activity State ",msg)
     }
 
     //Higher order function definition.
