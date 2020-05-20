@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var loginButton: Button
     private lateinit var emailId: String
     private lateinit var passwordString: String
+
     //Variable in kotlin
     private var Counter: Int = 0
 
@@ -87,42 +88,36 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("LongLogTag")
     override fun onStart() {
         super.onStart()
-        //print("onStart")
         Log.d("This is activity life cycle example", "onStart");
     }
 
     @SuppressLint("LongLogTag")
     override fun onResume() {
         super.onResume()
-        //print("onResume")
         Log.d("This is activity life cycle example", "onResume");
     }
 
     @SuppressLint("LongLogTag")
     override fun onPause() {
         super.onPause()
-        print("onPause")
         Log.d("This is activity life cycle example", "onPause");
     }
 
     @SuppressLint("LongLogTag")
     override fun onStop() {
         super.onStop()
-        //print("onStop")
         Log.d("This is activity life cycle example", "onStop");
     }
 
     @SuppressLint("LongLogTag")
     override fun onRestart() {
         super.onRestart()
-        //print("onRestart")
         Log.d("This is activity life cycle example", "onRestart");
     }
 
     @SuppressLint("LongLogTag")
     override fun onDestroy() {
         super.onDestroy()
-        //print("onDestroy")
         Log.d("This is activity life cycle example", "onDestroy");
     }
 
